@@ -1,6 +1,6 @@
 const Employee = require('../lib/Employee')
 
-test('Employee has the correct data applied', () => {
+describe('Employee has the correct data applied', () => {
     const testEmployee = new Employee('TestyMcTestFace', 1, 'test@email.com')
 
     expect(this.name).toEqual('TestyMcTestFace')
