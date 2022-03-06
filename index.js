@@ -5,7 +5,7 @@ const Engineer = require('./lib/Engineer')
 const Manager = require('./lib/Manager')
 const Intern = require('./lib/Intern')
 
-// generate html here ???
+const HTMLgenerator = require('./src/HTMLgenerator')
 
 // array for team members to be added to
 const teamMembers = []
