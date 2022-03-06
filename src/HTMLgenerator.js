@@ -114,3 +114,5 @@ const htmlGen = (prolfileCards) => {
 </html>
 `
 }
+
+module.exports = htmlGen
