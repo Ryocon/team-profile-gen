@@ -1,3 +1,4 @@
+const Employee = require("../lib/Employee")
 
 const engineerGen = function(engineer) {
     return `
@@ -51,3 +52,29 @@ const internGen = function(intern) {
 }
 
 
+htmlGen = (teamMembers) => {
+
+    profileArray = []
+
+    for (let i = 0; i < teamMembers.length; i++) {
+
+        // const teamMembers = profiles[i]
+        const role = teamMembers[i].getRole()
+        
+
+        if (role === 'Engineer') {
+            const engineerProfile = engineerGen()
+            profileArray.push(engineerProfile)
+        }
+
+        if (role === 'Manager') {
+            const managerProfile = managerGen()
+            profileArray.push(managerProfile)
+        }
+
+        if (role === 'Intern') {
+            const internProfile = internGen()
+            profileArray.push(internProfile)
+        }
+    }
+}
