@@ -15,7 +15,7 @@ const addTeamMember = () => {
         {
             type: 'list',
             message: 'What role is the team member you would like to add?',
-            name: 'role-type',
+            name: 'role',
             choices: [
                 'Engineer',
                 'Manager',
@@ -25,18 +25,18 @@ const addTeamMember = () => {
         }
     ])
     .then((answers) => {
-        switch (answers.role-type) {
+        switch (answers.role) {
             case 'Engineer':
                 engineerPrompts()
-                break
+                break;
             case 'Manager':
                 managerPrompts()
-                break
+                break;
             case 'Intern':
                 internPrompts()
-                break
+                break;
             case 'None':
-                break
+                break;
 
         }
     }
