@@ -5,9 +5,9 @@ const Engineer = require('./lib/Engineer')
 const Manager = require('./lib/Manager')
 const Intern = require('./lib/Intern')
 
-// generate html here
+// generate html here ???
 
-// arrary for team members to be added to
+// array for team members to be added to
 const teamMembers = []
 
 const addTeamMember = () => {
@@ -68,14 +68,81 @@ const engineerPrompts = () => {
     ])
     .then((answers) => {
         console.log(answers)
-        const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answer.engineerGithub)
+        const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub)
         teamMembers.push(engineer)
     }
-    
-    
+    )
+}
+
+const managerPrompts = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'What is the managers name?',
+            name: 'managerName'
+        },
+        {
+            type: 'input',
+            message: 'What is the managers ID number?',
+            name: 'managerID'
+        },
+        {
+            type: 'input',
+            message: 'What is the managers email address?',
+            name: 'managerEmail'
+        },
+        {
+            type: 'input',
+            message: 'What is the managers office number?',
+            name: 'managerOffice'
+        }
+    ])
+    .then((answers) => {
+        console.log(answers)
+        const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice)
+        teamMembers.push(manager)
+    }
     )
 }
 
 
+const internPrompts = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'What is the interns name?',
+            name: 'internName'
+        },
+        {
+            type: 'input',
+            message: 'What is the interns ID number?',
+            name: 'internID'
+        },
+        {
+            type: 'input',
+            message: 'What is the interns email address?',
+            name: 'internEmail'
+        },
+        {
+            type: 'input',
+            message: 'What is the interns school?',
+            name: 'internSchool'
+        }
+    ])
+    .then((answers) => {
+        console.log(answers)
+        const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool)
+        teamMembers.push(intern)
+    }
+    )
+}
+
+
+function writeToFile(fileName, data) {
+    // ? ternary operator used instead of if else statement
+    fs.writeFile(fileName, HTMLgenerator(data), (err) => (err ? console.log(err) : console.log('File Written!')))
+}
+
 
 addTeamMember()
+
