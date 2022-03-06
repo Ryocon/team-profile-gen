@@ -70,6 +70,8 @@ const engineerPrompts = () => {
         console.log(answers)
         const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub)
         teamMembers.push(engineer)
+        console.log(teamMembers)
+        addTeamMember()
     }
     )
 }
@@ -101,6 +103,8 @@ const managerPrompts = () => {
         console.log(answers)
         const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice)
         teamMembers.push(manager)
+        console.log(teamMembers)
+        addTeamMember()
     }
     )
 }
@@ -133,6 +137,8 @@ const internPrompts = () => {
         console.log(answers)
         const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool)
         teamMembers.push(intern)
+        console.log(teamMembers)
+        addTeamMember()
     }
     )
 }
