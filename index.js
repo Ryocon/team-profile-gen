@@ -36,7 +36,9 @@ const addTeamMember = () => {
                 internPrompts()
                 break;
             case 'None':
+                writeToFile('index.html', teamMembers)
                 break;
+                
 
         }
     }
@@ -150,5 +152,12 @@ function writeToFile(fileName, data) {
 }
 
 
+
+
 addTeamMember()
+// .then(teamMembers => {
+//     return cardGen(teamMembers)
+// }
+    
+//     )
 

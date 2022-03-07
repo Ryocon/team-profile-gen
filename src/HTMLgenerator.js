@@ -52,7 +52,7 @@ const internGen = function(intern) {
 }
 
 
-htmlGen = (teamMembers) => {
+const cardGen = (teamMembers) => {
 
     profileArray = []
 
@@ -81,6 +81,9 @@ htmlGen = (teamMembers) => {
     const profileCards = profileArray.join('')
     console.log(profileCards)
     // finish function
+
+    const cardHTML = htmlGen(profileCards)
+    return cardHTML
 
 }
 
