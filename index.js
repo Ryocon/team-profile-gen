@@ -35,11 +35,9 @@ const addTeamMember = () => {
             case 'Intern':
                 internPrompts()
                 break;
-            case 'None':
+            case 'No More at this time':
                 writeToFile('index.html', teamMembers)
                 break;
-                
-
         }
     }
     )
@@ -170,7 +168,6 @@ const managerPrompts = () => {
     )
 }
 
-
 const internPrompts = () => {
     inquirer.prompt([
         {
@@ -233,12 +230,10 @@ const internPrompts = () => {
     )
 }
 
-
 function writeToFile(fileName, teamMembers) {
     // ? ternary operator used instead of if else statement
     fs.writeFile('./dist/index.html', cardGen(teamMembers), (err) => (err ? console.log(err) : console.log('File Written!')))
 }
-
 
 addTeamMember()
 
