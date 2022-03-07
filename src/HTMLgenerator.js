@@ -12,9 +12,9 @@ const engineerGen = function (engineer) {
             </svg>
         </h3>
            <ul class="pl-2 pt-5">
-                <li class="p-2">${engineer.getId()}</li>
-                <li class="p-2">${engineer.getEmail()}</li>
-                <li class="p-2">${engineer.getGithub()}</li>
+                <li class="p-2">id: ${engineer.getId()}</li>
+                <li class="p-2">email: ${engineer.getEmail()}</li>
+                <li class="p-2">github: ${engineer.getGithub()}</li>
            </ul>
     </div>
 `;
@@ -35,9 +35,9 @@ const managerGen = function (manager) {
              </svg>
         </h3>
            <ul class="pl-2 pt-5">
-                <li class="p-2">${manager.getId()}</li>
-                <li class="p-2">${manager.getEmail()}</li>
-                <li class="p-2">${manager.getOfficeNumber()}</li>
+                <li class="p-2">id: ${manager.getId()}</li>
+                <li class="p-2">email: ${manager.getEmail()}</li>
+                <li class="p-2">office number: ${manager.getOfficeNumber()}</li>
            </ul>
     </div>
 `;
@@ -57,9 +57,9 @@ const internGen = function (intern) {
              </svg>
         </h3>
            <ul class="pl-2 pt-5">
-                <li class="p-2">${intern.getId()}</li>
-                <li class="p-2">${intern.getEmail()}</li>
-                <li class="p-2">${intern.getSchool()}</li>
+                <li class="p-2">id: ${intern.getId()}</li>
+                <li class="p-2">email: ${intern.getEmail()}</li>
+                <li class="p-2">school: ${intern.getSchool()}</li>
            </ul>
     </div>
 `;
