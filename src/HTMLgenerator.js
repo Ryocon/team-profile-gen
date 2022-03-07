@@ -6,12 +6,12 @@ const engineerGen = function(engineer) {
         <h3 class="bg-teal-600 pl-4 pt-2 pb-2 rounded-t-lg">
              ${engineer.name}
              <br>
-             ${engineer.role}
+             ${engineer.getRole()}
         </h3>
            <ul class="pl-2 pt-5">
                 <li class="p-2">${engineer.id}</li>
                 <li class="p-2">${engineer.email}</li>
-                <li class="p-2">${engineer.github}</li>
+                <li class="p-2">${engineer.getGithub()}</li>
            </ul>
     </div>
 `
@@ -23,12 +23,12 @@ const managerGen = function(manager) {
         <h3 class="bg-teal-600 pl-4 pt-2 pb-2 rounded-t-lg">
              ${manager.name}
              <br>
-             ${manager.role}
+             ${manager.getRole()}
         </h3>
            <ul class="pl-2 pt-5">
                 <li class="p-2">${manager.id}</li>
                 <li class="p-2">${manager.email}</li>
-                <li class="p-2">${manager.officeNumber}</li>
+                <li class="p-2">${manager.getOfficeNumber()}</li>
            </ul>
     </div>
 `
@@ -40,12 +40,12 @@ const internGen = function(intern) {
         <h3 class="bg-teal-600 pl-4 pt-2 pb-2 rounded-t-lg">
              ${intern.name}
              <br>
-             ${intern.role}
+             ${intern.getRole()}
         </h3>
            <ul class="pl-2 pt-5">
                 <li class="p-2">${intern.id}</li>
                 <li class="p-2">${intern.email}</li>
-                <li class="p-2">${intern.school}</li>
+                <li class="p-2">${intern.getSchool()}</li>
            </ul>
     </div>
 `
@@ -63,17 +63,17 @@ const cardGen = (teamMembers) => {
         
 
         if (role === 'Engineer') {
-            const engineerProfile = engineerGen()
+            const engineerProfile = engineerGen(teamMembers[i])
             profileArray.push(engineerProfile)
         }
 
         if (role === 'Manager') {
-            const managerProfile = managerGen()
+            const managerProfile = managerGen(teamMembers[i])
             profileArray.push(managerProfile)
         }
 
         if (role === 'Intern') {
-            const internProfile = internGen()
+            const internProfile = internGen(teamMembers[i])
             profileArray.push(internProfile)
         }
     }
@@ -118,4 +118,4 @@ const htmlGen = (prolfileCards) => {
 `
 }
 
-module.exports = htmlGen
+module.exports = cardGen

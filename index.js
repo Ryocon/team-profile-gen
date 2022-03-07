@@ -5,7 +5,7 @@ const Engineer = require('./lib/Engineer')
 const Manager = require('./lib/Manager')
 const Intern = require('./lib/Intern')
 
-const HTMLgenerator = require('./src/HTMLgenerator')
+const cardGen = require('./src/HTMLgenerator')
 
 // array for team members to be added to
 const teamMembers = []
@@ -146,18 +146,11 @@ const internPrompts = () => {
 }
 
 
-function writeToFile(fileName, data) {
+function writeToFile(fileName, teamMembers) {
     // ? ternary operator used instead of if else statement
-    fs.writeFile(fileName, HTMLgenerator(data), (err) => (err ? console.log(err) : console.log('File Written!')))
+    fs.writeFile('./dist/index.html', cardGen(teamMembers), (err) => (err ? console.log(err) : console.log('File Written!')))
 }
 
 
-
-
 addTeamMember()
-// .then(teamMembers => {
-//     return cardGen(teamMembers)
-// }
-    
-//     )
 
