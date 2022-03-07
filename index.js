@@ -52,7 +52,7 @@ const engineerPrompts = () => {
     inquirer.prompt([
         {
             type: 'input',
-            message: 'What is the enigneers name?',
+            message: 'What is the engineers name?',
             name: 'engineerName',
             validate: (input) => {
                 if (!input) {
