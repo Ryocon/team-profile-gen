@@ -96,7 +96,6 @@ const engineerPrompts = () => {
         }
     ])
     .then((answers) => {
-        console.log(answers)
         const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub)
         teamMembers.push(engineer)
         console.log(teamMembers)
@@ -159,7 +158,6 @@ const managerPrompts = () => {
         }
     ])
     .then((answers) => {
-        console.log(answers)
         const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice)
         teamMembers.push(manager)
         console.log(teamMembers)
@@ -221,7 +219,6 @@ const internPrompts = () => {
         }
     ])
     .then((answers) => {
-        console.log(answers)
         const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool)
         teamMembers.push(intern)
         console.log(teamMembers)
