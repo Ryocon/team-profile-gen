@@ -20,7 +20,7 @@ const addTeamMember = () => {
                 'Engineer',
                 'Manager',
                 'Intern',
-                'None'
+                'No More at this time'
             ]
         }
     ])
@@ -50,22 +50,51 @@ const engineerPrompts = () => {
         {
             type: 'input',
             message: 'What is the enigneers name?',
-            name: 'engineerName'
+            name: 'engineerName',
+            validate: (input) => {
+                if (!input) {
+                    return 'Please provide a name!'
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'input',
             message: 'What is the engineers ID number?',
-            name: 'engineerID'
+            name: 'engineerID',
+            validate: (input) => {
+                if (isNaN(input)) {
+                    console.log(' <--- Please input a number!') 
+                    return false
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'input',
             message: 'What is the engineers email address?',
-            name: 'engineerEmail'
+            name: 'engineerEmail',
+            validate: (input) => {
+                if (!input) {
+                    return 'Please provide an email address!'
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'input',
             message: 'What is the engineers Github username?',
-            name: 'engineerGithub'
+            name: 'engineerGithub',
+            validate: (input) => {
+                if (!input) {
+                    return 'Please provide a Github user!'
+                } else {
+                    return true
+                }
+            }
         }
     ])
     .then((answers) => {
@@ -83,22 +112,52 @@ const managerPrompts = () => {
         {
             type: 'input',
             message: 'What is the managers name?',
-            name: 'managerName'
+            name: 'managerName',
+            validate: (input) => {
+                if (!input) {
+                    return 'Please provide a name!'
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'input',
             message: 'What is the managers ID number?',
-            name: 'managerID'
+            name: 'managerID',
+            validate: (input) => {
+                if (isNaN(input)) {
+                    console.log(' <--- Please input a number!') 
+                    return false
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'input',
             message: 'What is the managers email address?',
-            name: 'managerEmail'
+            name: 'managerEmail',
+            validate: (input) => {
+                if (!input) {
+                    return 'Please provide an email address!'
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'input',
             message: 'What is the managers office number?',
-            name: 'managerOffice'
+            name: 'managerOffice',
+            validate: (input) => {
+                if (isNaN(input)) {
+                    console.log(' <--- Please input a number!') 
+                    return false
+                } else {
+                    return true
+                }
+            }
         }
     ])
     .then((answers) => {
@@ -117,22 +176,51 @@ const internPrompts = () => {
         {
             type: 'input',
             message: 'What is the interns name?',
-            name: 'internName'
+            name: 'internName',
+            validate: (input) => {
+                if (!input) {
+                    return 'Please provide a name!'
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'input',
             message: 'What is the interns ID number?',
-            name: 'internID'
+            name: 'internID',
+            validate: (input) => {
+                if (isNaN(input)) {
+                    console.log(' <--- Please input a number!') 
+                    return false
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'input',
             message: 'What is the interns email address?',
-            name: 'internEmail'
+            name: 'internEmail',
+            validate: (input) => {
+                if (!input) {
+                    return 'Please provide an email address!'
+                } else {
+                    return true
+                }
+            }
         },
         {
             type: 'input',
             message: 'What is the interns school?',
-            name: 'internSchool'
+            name: 'internSchool',
+            validate: (input) => {
+                if (!input) {
+                    return 'Please provide a school!'
+                } else {
+                    return true
+                }
+            }
         }
     ])
     .then((answers) => {
