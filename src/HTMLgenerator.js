@@ -84,6 +84,7 @@ const cardGen = (teamMembers) => {
 }
 
 // generates the html page and places the profile cards within
+// html is styled using TailwindCSS
 const htmlGen = (prolfileCards) => {
     return `
     
