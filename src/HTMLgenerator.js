@@ -1,5 +1,4 @@
-const Employee = require("../lib/Employee")
-
+// generates the engineer card
 const engineerGen = function(engineer) {
     return `
     <div class="w-64 h-64 bg-gray-300 rounded-lg drop-shadow-md hover:bg-slate-400">
@@ -17,6 +16,7 @@ const engineerGen = function(engineer) {
 `
 }
 
+// generates the manager card
 const managerGen = function(manager) {
     return `
     <div class="w-64 h-64 bg-gray-300 rounded-lg drop-shadow-md hover:bg-slate-400">
@@ -34,6 +34,7 @@ const managerGen = function(manager) {
 `
 }
 
+// generates the intern card
 const internGen = function(intern) {
     return `
     <div class="w-64 h-64 bg-gray-300 rounded-lg drop-shadow-md hover:bg-slate-400">
@@ -51,6 +52,7 @@ const internGen = function(intern) {
 `
 }
 
+// generates the required amount of team profile cards using a for loop and invoking each function based on the role
 const cardGen = (teamMembers) => {
 
     profileArray = []
@@ -81,6 +83,7 @@ const cardGen = (teamMembers) => {
 
 }
 
+// generates the html page and places the profile cards within
 const htmlGen = (prolfileCards) => {
     return `
     

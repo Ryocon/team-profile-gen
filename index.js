@@ -1,3 +1,4 @@
+// all imports required for the script to function
 const inquirer = require('inquirer')
 const fs = require('fs')
 
@@ -5,11 +6,14 @@ const Engineer = require('./lib/Engineer')
 const Manager = require('./lib/Manager')
 const Intern = require('./lib/Intern')
 
+// import to where the html will be generated
 const cardGen = require('./src/HTMLgenerator')
 
 // array for team members to be added to
 const teamMembers = []
 
+// prompts for user input
+// it will loop through the functions using the switch statement and add to the teamMembers array until 'No more at this is selected' which invoke the writeToFile function
 const addTeamMember = () => {
     inquirer.prompt([
         {
@@ -43,6 +47,7 @@ const addTeamMember = () => {
     )
 }
 
+// prompts for the engineer class
 const engineerPrompts = () => {
     inquirer.prompt([
         {
@@ -104,6 +109,7 @@ const engineerPrompts = () => {
     )
 }
 
+// prompts for the manager class
 const managerPrompts = () => {
     inquirer.prompt([
         {
@@ -166,6 +172,7 @@ const managerPrompts = () => {
     )
 }
 
+// prompts for the intern class
 const internPrompts = () => {
     inquirer.prompt([
         {
@@ -227,10 +234,12 @@ const internPrompts = () => {
     )
 }
 
+// function that writes the index.html file in the correct folder
 function writeToFile(fileName, teamMembers) {
     // ? ternary operator used instead of if else statement
     fs.writeFile('./dist/index.html', cardGen(teamMembers), (err) => (err ? console.log(err) : console.log('File Written!')))
 }
 
+// function that initialises the script
 addTeamMember()
 
