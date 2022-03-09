@@ -46,6 +46,10 @@ To run the application - <br>
 
 
 
+https://user-images.githubusercontent.com/54818132/157533779-1b551e9c-0315-4659-88ee-a6b32b885f96.mp4
+
+
+
   ## Screenshots
 
   ![an example output of the html page](screenshots/example-output.PNG)
