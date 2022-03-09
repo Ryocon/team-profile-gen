@@ -235,7 +235,7 @@ const internPrompts = () => {
 }
 
 // function that writes the index.html file in the correct folder
-function writeToFile(fileName, teamMembers) {
+function writeToFile() {
     // ? ternary operator used instead of if else statement
     fs.writeFile('./dist/index.html', cardGen(teamMembers), (err) => (err ? console.log(err) : console.log('File Written!')))
 }
